@@ -1,29 +1,49 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* dummy = new ListNode(0);
-        ListNode* curr = dummy;
+        // Create a dummy head node to simplify list construction
+        ListNode* dummyHead = new ListNode(0);
+        ListNode* current = dummyHead;
         int carry = 0;
-
+        
+        // Loop until both lists are empty and there is no remaining carry
         while (l1 != nullptr || l2 != nullptr || carry != 0) {
-            int sum = carry;
-
+            int sum = carry; // Start with the carry from the previous step
+            
+            // Add value from l1 if it exists
             if (l1 != nullptr) {
                 sum += l1->val;
                 l1 = l1->next;
             }
-
+            
+            // Add value from l2 if it exists
             if (l2 != nullptr) {
                 sum += l2->val;
                 l2 = l2->next;
             }
-
+            
+            // Calculate the new carry and the digit value to store
             carry = sum / 10;
-
-            curr->next = new ListNode(sum % 10);
-            curr = curr->next;
+            current->next = new ListNode(sum % 10);
+            
+            // Move the pointer forward
+            current = current->next;
         }
-
-        return dummy->next;
+        
+        // The actual result starts from the node following the dummy head
+        ListNode* result = dummyHead->next;
+        delete dummyHead; // Free the temporary dummy head memory
+        return result;
     }
 };

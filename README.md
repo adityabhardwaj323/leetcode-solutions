@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0169-majority-element](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0169-majority-element) |
 | [0189-rotate-array](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0189-rotate-array) |
+| [0238-product-of-array-except-self](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0238-product-of-array-except-self) |
 | [0303-range-sum-query-immutable](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0303-range-sum-query-immutable) |
 | [0485-max-consecutive-ones](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0485-max-consecutive-ones) |
 ## Two Pointers
@@ -28,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Prefix Sum
 |  |
 | ------- |
+| [0238-product-of-array-except-self](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0238-product-of-array-except-self) |
 | [0303-range-sum-query-immutable](https://github.com/adityabhardwaj323/leetcode-solutions/tree/master/0303-range-sum-query-immutable) |
 ## Linked List
 |  |

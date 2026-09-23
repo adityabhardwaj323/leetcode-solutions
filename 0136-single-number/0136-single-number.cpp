@@ -1,18 +1,18 @@
 class Solution {
 public:
     int singleNumber(vector<int>& nums) {
-        unordered_map<int, int> freq;
-
-        for(int x : nums) {
-            freq[x]++;
-        }
-
-        for(int x : nums) {
-            if(freq[x] == 1) {
-                return x;
+        int ans;
+        for(int i=0;i<nums.size();i++){
+         int count = 0;
+         for(int j=0;j<nums.size();j++){
+            if(nums[i]==nums[j]){
+                count++;
             }
+         }   
+         if(count==1){
+            ans = nums[i];
+         }
         }
-
-        return -1;
+        return ans;
     }
 };
